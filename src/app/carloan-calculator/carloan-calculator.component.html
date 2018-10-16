@@ -1,0 +1,20 @@
+<form>
+  <div class="form-group">
+  <h1 class="text-center text-primary">GPA Calculator</h1>
+   <div class="input-group-prepend">
+       <label>Enter Grade: </label>
+       <input type="text" #grades class="form-control" placeholder="Click enter grade button below after each grade you enter" name="grades" ngModel>
+       <br>
+       <span class="gradebutton" (click)="adddgrade(grades.value)">Enter Grade</span>
+       <br><br><label>Total number of credits: </label>
+       <input type="number" #credits class="form-control" placeholder="Enter total credits" name="credits" ngModel>
+       <br><br><label>Total number of subjects:</label> 
+       <input type="number" #subject class="form-control" placeholder="Enter total subjects" name="subject" ngModel>
+       <br><br>
+        <label>Anwser</label>
+        <input type="text" value="{{display}}" class="form-control" placeholder="Result would be displayed after you press the submit button"  ngModel>
+       <br><br>
+   <span class="input-group-text" (click)="calculate(credits.value, subject.value)"><i class="material-icons" style="display: inline;">Submit</i></span>
+   </div>      
+  </div>   
+ </form>

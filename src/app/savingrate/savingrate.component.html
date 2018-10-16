@@ -1,0 +1,21 @@
+<form>
+  <div class="form-group">
+  <h1 class="text-center text-primary">Calculating the saving rate</h1>
+   <div class="input-group-prepend">
+       <label>Total income:</label> 
+       <input type="number" #totalincome class="form-control" placeholder="Total income earned" name="totalincome" ngModel>
+       <br><br><label>Income tax:</label> 
+       <input type="number" #incometax class="form-control" placeholder="Income tax" name="incometax" ngModel>
+       <br><br><label>State tax:</label> 
+       <input type="number" #statetax class="form-control" placeholder="State tax" name="statetax" ngModel>
+       <br><br><label>Payroll tax:</label> 
+       <input type="number" #paytax class="form-control" placeholder="Payroll tax" name="paytax" ngModel>
+       <br><br><label>Total saving amount</label>
+       <input type="number" #totalsaving class="form-control" placeholder="Total saving amount" name="totalsaving" ngModel>
+       <br><br>
+        <label>Anwser</label>
+        <input type="text" value="{{display}}" class="form-control" placeholder="Result would be displayed after you press the submit button"  ngModel><br><br>
+   <span class="input-group-text" (click)="savings(totalincome.value, incometax.value, statetax.value, paytax.value,totalsaving.value)"><i class="material-icons" style="display: inline;">Submit</i></span>
+   </div>      
+  </div>   
+ </form>

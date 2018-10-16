@@ -1,0 +1,42 @@
+  <h1 class="maintitle">Investment Calulators</h1>
+<div class="container-fluid">
+     <div class="row">
+    <div class="col-md-6">
+ <form>
+  <div class="form-group">
+  <h1 class="text-center text-primary">Calculating the ROI value</h1>
+   <div class="input-group-prepend">
+       <label>Gain from Investment:</label>  <input type="number" #invest class="form-control" placeholder="Amount Invested" name="invest" ngModel>
+       <br><br> <label>Cost of Investment:</label> 
+       <input type="number" #returned class="form-control" placeholder="Amount Returned" name="returned" ngModel>
+       <br><br> <label>Total number of years:</label> 
+       <input type="number" #year class="form-control" placeholder="Amount of years" name="year" ngModel>
+       <br><br>
+       <label>Anwser</label>
+        <input type="text" value="{{display}}" class="form-control" placeholder="Result would be displayed after you press the submit button"  ngModel>
+       <br><br>
+   <span class="input-group-text" (click)="addTodo(invest.value, returned.value, year.value)"><i class="material-icons" style="display: inline;">Submit</i></span>
+   </div>      
+  </div>   
+ </form>
+       
+         </div>  
+           
+        
+    <div class="col-md-6">
+    <app-carloan-calculator></app-carloan-calculator>
+         </div>
+         <div class="container-fluid">
+     <div class="row">
+    <div class="col-md-6">
+    <app-savingrate></app-savingrate>
+         </div>
+         
+    <div class="col-md-6">
+    <app-gpa></app-gpa>
+         </div>
+    </div>
+</div>
+
+    
+   

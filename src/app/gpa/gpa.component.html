@@ -1,0 +1,17 @@
+<form>
+  <div class="form-group">
+  <h1 class="text-center text-primary">Calculating the monthly payment for car loan</h1>
+   <div class="input-group-prepend">
+       <label>Loan Amount: </label>
+       <input type="number" #loanamount class="form-control" placeholder="Loan Amount" name="loanamount" ngModel>
+       <br><br><label>Interest Rate:</label> 
+       <input type="number" #interestrate class="form-control" placeholder="Interest rate" name="interestrate" ngModel>
+       <br><br><label>Total number of months: </label>
+       <input type="number" #year class="form-control" placeholder="Number of months" name="year" ngModel>
+        <br><br>
+        <label>Anwser</label>
+        <input type="text" value="{{display}}" class="form-control" placeholder="Result would be displayed after you press the submit button"  ngModel><br><br>
+   <span class="input-group-text" (click)="payment(loanamount.value, interestrate.value, year.value)"><i class="material-icons" style="display: inline;">Submit</i></span>
+   </div>      
+  </div>   
+ </form>
